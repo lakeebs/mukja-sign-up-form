@@ -1,15 +1,20 @@
 // Fade in image on load
-document.addEventListener('DOMContentLoaded', function() {
-  const heroImg = document.querySelector('.hero img');
+const heroImg = document.querySelector('.hero img');
 
-  heroImg.classList.remove('hidden');
-  
-  if (!heroImg.complete) {
-    heroImg.addEventListener('load', function() {
-      heroImg.classList.remove('hidden');
-    });
-  }
-});
+// Check if the image is already loaded
+if (heroImg.complete) {
+  fadeInImage();
+} else {
+  // If the image is not yet loaded, wait for the load event
+  heroImg.addEventListener('load', fadeInImage);
+}
+
+// Add a delay before removing the hidden class
+function fadeInImage() {
+  setTimeout(() => {
+    heroImg.classList.remove('hidden');
+  }, 1000);
+}
 
 // Show/hide placeholder and label
 const inputFields = document.querySelectorAll('input');

@@ -191,11 +191,11 @@ main {
     object-fit: cover;
     position: fixed;
     width: 60vw;
+    transition: opacity 1.5s ease-in-out;
   }
 
   .hidden {
     opacity: 0;
-    transition: opacity .5s ease-in-out;
   }
 }
 
