@@ -1,11 +1,114 @@
+:root {
+  --blue: #00a9cf;
+  --orange: #fb4500;
+  --font: "Readex Pro", sans-serif;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 100%;
+    transform: translateY(0%);
+  }
+}
+
+::selection {
+  background-color: var(--blue);
+  color: #fff;
+}
+
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
 }
 
 html, body {
+  background: #101010;
+  font-family: system-ui, sans-serif;
+  line-height: 1.1;
+  overflow: hidden;
+}
 
+a {
+
+}
+
+h1 {
+  color: #fff;
+  font-family: var(--font);
+  font-size: 2.5rem;
+  width: min(70%, 400px);
+
+  .blue {
+    color: var(--blue);
+    text-transform: uppercase;
+  }
+}
+
+form {
+  width: min(70%, 400px);
+}
+
+button {
+  background: linear-gradient(to right, #ff6d6d, var(--orange));
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1rem;
+  text-transform: uppercase;
+  width: max(100%, 250px);
+}
+
+input {
+  appearance: none;
+  background: #232323;
+  border: 1px solid #323232;
+  border-radius: 3px;
+  color: #fff;
+  font-family: var(--font);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  padding: .5rem;
+  width: max(100%, 250px);
+}
+
+input:focus {
+  outline: 1px solid var(--blue);
+}
+
+input::placeholder {
+  font-size:.9rem;
+}
+
+.input-container {
+  position: relative;
+}
+
+label {
+  animation: slide-in 300ms;
+  color: #c3c3c3;
+  display: none;
+  font-size: .8rem;
+  right: 10px;
+  position: absolute;
+  top: 5px;
+}
+
+label.focused {
+  color: #555;
+  display: block;
 }
 
 main {
@@ -14,36 +117,36 @@ main {
 }
 
 .hero {
-  width: 45vw;
+  width: 60vw;
+
+  img {
+    height: 100vh;
+    left: 0;
+    object-fit: cover;
+    position: fixed;
+    width: 60vw;
+  }
 }
 
 .info {
-  display: flex;
   align-items: center;
+  display: flex;
   flex-direction: column;
-  width: 55vw;
+  justify-content: center;
+  width: 40vw;
 }
 
 .top {
-  display: flex;
   align-items: center;
-  height: 33vh;
-  background: #000;
-  color: #fff;
-  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  width: 100%;
 }
 
 .sign-up {
-  display: flex;
   align-items: center;
-  height: 66vh;
+  display: flex;
   justify-content: center;
-}
-
-form {
-  width: 66%;
-}
-
-input {
-  appearance: none;
+  width: 100%;
 }

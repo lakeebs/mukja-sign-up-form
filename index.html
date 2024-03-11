@@ -4,36 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign Up Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main>
     <section class="hero">
-      <img src="img/stephan-valentin-wepDTOWs4d0-unsplash.jpg" width="100%">
+      <img src="img/romeo-a-qG_WA_26OBI-unsplash.jpg" width="100%">
     </section>
     <section class="info">
       <div class="top">
-        <p>Introducing Mukja: Your passport to hidden Korean gems! Discover the best hole-in-the-walls near you based on reviews from real people. Taste the real Korea with Mukja!</p>
+        <h1>Find local hidden gems with <span class="blue">Mukja!</span></h1>
       </div>
       <div class="sign-up">
-        <form action="/">
-          <fieldset>
-            <legend>Your details</legend>
+        <form>
+          <div class="username input-container">
             <label for="username">Username</label>
-            <input type="text" id="username" name="username">
+            <input type="text" id="username" name="username" placeholder="Username:" minlength="4" maxlength="8" autocomplete="off" required>
+          </div>
+          <div class="email input-container">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email">
-            <label for="phone">Phone number</label>
-            <input type="tel" id="phone" name="phone">
+            <input type="email" id="email" name="email" placeholder="Email:" autocomplete="off" required>
+          </div>
+          <div class="pwd input-container">
             <label for="pwd">Password</label>
-            <input type="password" id="pwd" name="pwd">
+            <input type="password" id="pwd" name="pwd" placeholder="Password:" required>
+          </div>
+          <div class="cpwd input-container">
             <label for="cpwd">Confirm password</label>
-            <input type="password" id="cpwd" name="cpwd">
-            <button type="submit">Submit</button>
-          </fieldset>
+            <input type="password" id="cpwd" name="cpwd" placeholder="Confirm password:" required>
+          </div>
+          <button type="submit">Let's eat</button>
         </form>
       </div>
     </section>
   </main>
+  <script src="script.js"></script>
 </body>
 </html>
