@@ -13,7 +13,7 @@ if (heroImg.complete) {
 function fadeInImage() {
   setTimeout(() => {
     heroImg.classList.remove('hidden');
-  }, 1000);
+  }, 500);
 }
 
 // Show/hide placeholder and label
