@@ -157,7 +157,7 @@ main {
   width: 60vw;
 
   .logo {
-    background: rgba(0, 0, 0, 0.5);
+    background: #10101080;
     border-radius: 5px 0 0;
     color: #fff;
     font-size: 3rem;
