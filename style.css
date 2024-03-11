@@ -216,3 +216,30 @@ main {
   justify-content: center;
   width: 100%;
 }
+
+@media screen and (max-width: 600px) {
+  #main {
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .hero {
+    position: static;
+    width: auto;
+
+    span.credits {
+      display: none;
+    }
+
+    img {
+      opacity: .1;
+      width: 100vw;
+    }
+  }
+
+  .info {
+    width: 100vw;
+    z-index: 1;
+  }
+}
