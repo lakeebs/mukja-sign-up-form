@@ -12,6 +12,10 @@
 <body>
   <main>
     <section class="hero">
+      <div class="logo">
+        <span>M</span>
+      </div>
+      <span class="credits">Photo by Romeo A on <a href="https://unsplash.com">Unsplash</a></span>
       <img src="img/romeo-a-qG_WA_26OBI-unsplash.jpg" width="100%">
     </section>
     <section class="info">
@@ -22,19 +26,24 @@
         <form>
           <div class="username input-container">
             <label for="username">Username</label>
-            <input type="text" id="username" name="username" placeholder="Username:" minlength="4" maxlength="8" autocomplete="off" required>
+            <input type="text" id="username" name="username" placeholder="Username" minlength="4" maxlength="8" autocomplete="off" required>
+            <span class="valid"></span>
           </div>
           <div class="email input-container">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Email:" autocomplete="off" required>
+            <input type="email" id="email" name="email" placeholder="Email" autocomplete="off" required>
+            <span class="valid"></span>
           </div>
+          <span class="pwd-note">Minimum 8 characters including: uppercase, lowercase, number/special character</span>
           <div class="pwd input-container">
             <label for="pwd">Password</label>
-            <input type="password" id="pwd" name="pwd" placeholder="Password:" required>
+            <input type="password" id="pwd" name="pwd" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" placeholder="Password" required>
+            <span class="valid"></span>
           </div>
           <div class="cpwd input-container">
             <label for="cpwd">Confirm password</label>
-            <input type="password" id="cpwd" name="cpwd" placeholder="Confirm password:" required>
+            <input type="password" id="cpwd" name="cpwd" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" placeholder="Confirm password" required>
+            <span class="valid"></span>
           </div>
           <button type="submit">Let's eat</button>
         </form>

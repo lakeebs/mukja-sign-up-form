@@ -38,7 +38,7 @@ html, body {
 }
 
 a {
-
+  color: var(--blue);
 }
 
 h1 {
@@ -68,7 +68,20 @@ button {
   font-weight: 600;
   padding: 1rem;
   text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.2s;
   width: max(100%, 250px);
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:hover {
+  background: linear-gradient(to right, var(--orange), #ff6d6d);
 }
 
 input {
@@ -84,6 +97,19 @@ input {
   width: max(100%, 250px);
 }
 
+input:valid + span.valid::after {
+  border-bottom: 3px solid var(--blue);
+  border-right: 3px solid var(--blue);
+  content: '';
+  display: inline-block;
+  height: 10px;
+  width: 4px;
+  position: absolute;
+  transform: rotate(36deg);
+  right: 10px;
+  top: 20px;
+}
+
 input:focus {
   outline: 1px solid var(--blue);
 }
@@ -94,6 +120,14 @@ input::placeholder {
 
 .input-container {
   position: relative;
+}
+
+.pwd-note {
+  animation: slide-in 300ms;
+  color: #777;
+  display: none;
+  font-size: .8rem;
+  margin-bottom: 1rem;
 }
 
 label {
@@ -117,7 +151,39 @@ main {
 }
 
 .hero {
+  align-items: flex-end;
+  display: flex;
+  position: relative;
   width: 60vw;
+
+  .logo {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px 0 0;
+    color: #fff;
+    font-size: 3rem;
+    right: 0;
+    padding: 0 .3rem;
+    position: absolute;
+    top: 1rem;
+    z-index: 1;
+  
+    span {
+      color: var(--blue);
+      display: block;
+      font-weight: 600;
+    }
+  }
+
+  span.credits {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 3px 3px;
+    color: #999;
+    display: block;
+    font-size: .7rem;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    z-index: 1;
+  }
 
   img {
     height: 100vh;
