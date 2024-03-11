@@ -192,6 +192,11 @@ main {
     position: fixed;
     width: 60vw;
   }
+
+  .hidden {
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+  }
 }
 
 .info {

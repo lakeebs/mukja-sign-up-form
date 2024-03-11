@@ -1,3 +1,16 @@
+// Fade in image on load
+document.addEventListener('DOMContentLoaded', function() {
+  const heroImg = document.querySelector('.hero img');
+
+  heroImg.classList.remove('hidden');
+  
+  if (!heroImg.complete) {
+    heroImg.addEventListener('load', function() {
+      heroImg.classList.remove('hidden');
+    });
+  }
+});
+
 // Show/hide placeholder and label
 const inputFields = document.querySelectorAll('input');
 const pwdNote = document.querySelector('.pwd-note');
